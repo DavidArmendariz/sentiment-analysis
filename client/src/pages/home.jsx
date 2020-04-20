@@ -28,7 +28,6 @@ const Home = () => {
   const [error, setError] = React.useState(false);
   const [isProcessing, setIsProcessing] = React.useState(false);
   const [data, setData] = React.useState(null);
-  console.log(data);
   const handleSubmit = async (event) => {
     event.preventDefault();
     if (error) {
@@ -39,7 +38,7 @@ const Home = () => {
         const requestAnalyzeArticle = await analyzeArticle(url);
         setData(requestAnalyzeArticle.data);
       } catch (error) {
-        console.log(error);
+        alert("Something went wrong");
       } finally {
         setIsProcessing(false);
       }
@@ -72,7 +71,7 @@ const Home = () => {
       </Grid>
       {isProcessing && (
         <Grid container item justify="center" style={{ margin: 20 }}>
-          <Loader />
+          <Loader color="#3f51b5" type="Oval" />
         </Grid>
       )}
       {data && (

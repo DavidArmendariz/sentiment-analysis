@@ -1,10 +1,11 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
+import SimpleTable from "./table";
 
 const PresentData = ({ data }) => {
   return (
-    <div style={{margin: 50}}>
+    <div style={{ margin: 50 }}>
       <Grid container item justify="center">
         <Typography variant="h3">Summary of your article</Typography>
       </Grid>
@@ -50,8 +51,17 @@ const PresentData = ({ data }) => {
           </Grid>
         ))}
       </Grid>
+      <Grid container item justify="center">
+        <Typography variant="h3">Concepts detected</Typography>
+      </Grid>
       <Grid container justify="center">
         {data.concepts.join(", ")}
+      </Grid>
+      <Grid container item justify="center">
+        <Typography variant="h3">Entities</Typography>
+      </Grid>
+      <Grid container item justify="center">
+        <SimpleTable rows={data.entities.entities} />
       </Grid>
     </div>
   );
