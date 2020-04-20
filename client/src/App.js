@@ -1,9 +1,12 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { UserContext } from "./providers/userProvider";
+import SignIn from "./pages/signIn";
 
-function App() {
-  return (
+const App = () => {
+  const user = React.useContext(UserContext);
+  return user ? (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -20,7 +23,9 @@ function App() {
         </a>
       </header>
     </div>
+  ) : (
+    <SignIn />
   );
-}
+};
 
 export default App;
