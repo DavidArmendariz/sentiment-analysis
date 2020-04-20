@@ -1,1 +1,6 @@
 aylien-news-api
+flask
+python-dotenv
+autopep8
+flask-cors
+aylien-apiclient

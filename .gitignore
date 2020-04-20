@@ -8,3 +8,9 @@ yarn-error.log*
 
 # Python virtual environment
 venv/
+
+# __pycache__
+__pycache__/
+
+# .vscode
+.vscode/
