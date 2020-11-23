@@ -7,7 +7,6 @@ class UserProvider extends React.Component {
   state = {
     user: null,
   };
-
   componentDidMount = () => {
     auth.onAuthStateChanged((userAuth) => {
       this.setState({ user: userAuth });

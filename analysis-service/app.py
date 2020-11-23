@@ -1,9 +1,9 @@
 import os
 from flask import Flask, request, jsonify
-from token_required import token_required
 from dotenv import load_dotenv
 from flask_cors import CORS
-from analyze_article import analyze_article
+from analysis.analyze_article import analyze_article
+from utils.token_required import token_required
 
 load_dotenv()
 app = Flask(__name__)

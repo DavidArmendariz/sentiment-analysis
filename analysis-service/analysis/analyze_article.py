@@ -4,8 +4,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-APP_ID = os.environ.get("APP_ID")
-API_KEY = os.environ.get("API_KEY")
+APP_ID = os.environ.get("AYLIEN_APP_ID")
+API_KEY = os.environ.get("AYLIEN_API_KEY")
 
 client = textapi.Client(APP_ID, API_KEY)
 
@@ -30,7 +30,12 @@ def analyze_article(url):
             classifications_as_list.append(category)
         # API call to get the entities
         entities = client.Entities({"text": text})
-        return {"sentiment": sentiment, "concepts": concepts_as_list,
-                "classification": classifications_as_list, "summary": summary, "entities": entities}
+        return {
+            "sentiment": sentiment,
+            "concepts": concepts_as_list,
+            "classification": classifications_as_list,
+            "summary": summary,
+            "entities": entities
+        }
     except Exception as e:
         print("Error when calling the API")

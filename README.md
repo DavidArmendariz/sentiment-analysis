@@ -1,29 +1,23 @@
-# Whale & Jaguar coding challenge
+# Sentiment Analysis
 
-In order to create the virtual environment appropriately, and run the Flask server, run the following commands:
+This is a project to analyze text with the Aylien API. Unfortunately, I have to upgrade it since Aylien is no longer supporting text analysis.
 
-```
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-python3 app.py
+## Analysis service
+
+To start the analysis service, run the following commands (you must have Pipenv installed):
+
+```zsh
+pipenv install
+pipenv shell
+python app.py
 ```
 
 ## Client
 
 To start the client, run the following commands:
 
-```
+```zsh
 cd client
 yarn install
 yarn start
-```
-
-## Credentials
-
-The credentials for the login are:
-
-```
-username: user@test.com
-password: test123
 ```

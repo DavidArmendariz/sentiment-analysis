@@ -23,7 +23,7 @@ const UrlPlaceholder = ({ url, setUrl, error, setError }) => {
       }}
       variant="filled"
       onChange={handleChange}
-      helperText={error ? "Enter a valid URL": ""}
+      helperText={error ? "Enter a valid URL" : ""}
     />
   );
 };

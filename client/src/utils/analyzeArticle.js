@@ -6,7 +6,7 @@ const analyzeArticle = (url) => {
     method: "POST",
     data: { url },
     headers: {
-      Authorization: "Bearer LKT2Ko_1YDL1wZas5OjljkoxpdLK0M31DhEcE1SHRGQ",
+      Authorization: `Bearer ${process.env.REACT_APP_BEARER_TOKEN}`,
     },
   });
 };

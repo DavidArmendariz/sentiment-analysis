@@ -14,3 +14,9 @@ __pycache__/
 
 # .vscode
 .vscode/
+
+# asdf tool versions
+.tool-versions
+
+# environment variables
+.env
